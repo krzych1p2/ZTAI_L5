@@ -22,4 +22,10 @@ public class PostService {
                         "swine frankfurter doner pork belly pork drumstick ham."));
 
     }
+    public List<Post> getAll(){
+        return posts;
+    }
+    public Post get(int id) {
+        return posts.get(id);
+    }
 }

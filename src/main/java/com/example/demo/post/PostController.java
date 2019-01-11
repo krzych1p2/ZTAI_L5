@@ -1,5 +1,6 @@
 package com.example.demo.post;
 
+import com.sun.xml.internal.bind.v2.model.core.ID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,10 +21,10 @@ public class PostController {
 
     @GetMapping("/api/posts")
     public List<Post> getAllPosts(){
-        return postService.get(id);
+        return postService.getAll();
     }
     @GetMapping("/api/posts/{id}")
-    publice Post get(@PathVariable int id) {
+    public Post get(@PathVariable int id) {
         return postService.get(id);
     }
 
